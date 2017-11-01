@@ -1,0 +1,170 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1746601855/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1746601855.dir/build.make CMakeFiles/cmTryCompileExec1746601855.dir/build
+make[1]: Entering directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1746601855.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1746601855.dir/CheckSymbolExists.c.o   -c /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1746601855
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1746601855.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1746601855.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1746601855 -rdynamic 
+CMakeFiles/cmTryCompileExec1746601855.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1746601855] Error 1
+make: *** [cmTryCompileExec1746601855/fast] Error 2
+
+File /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec498837981/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec498837981.dir/build.make CMakeFiles/cmTryCompileExec498837981.dir/build
+make[1]: Entering directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec498837981.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec498837981.dir/CheckSymbolExists.c.o   -c /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec498837981
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec498837981.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec498837981.dir/CheckSymbolExists.c.o  -o cmTryCompileExec498837981 -rdynamic 
+CMakeFiles/cmTryCompileExec498837981.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec498837981] Error 1
+make: *** [cmTryCompileExec498837981/fast] Error 2
+
+File /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2192183776/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2192183776.dir/build.make CMakeFiles/cmTryCompileExec2192183776.dir/build
+make[1]: Entering directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2192183776.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2192183776.dir/CheckSymbolExists.c.o   -c /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2192183776
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2192183776.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2192183776.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2192183776 -rdynamic 
+CMakeFiles/cmTryCompileExec2192183776.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2192183776] Error 1
+make: *** [cmTryCompileExec2192183776/fast] Error 2
+
+File /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3611919997/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3611919997.dir/build.make CMakeFiles/cmTryCompileExec3611919997.dir/build
+make[1]: Entering directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3611919997.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3611919997.dir/CheckSymbolExists.c.o   -c /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3611919997
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3611919997.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3611919997.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3611919997 -rdynamic 
+CMakeFiles/cmTryCompileExec3611919997.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3611919997] Error 1
+make: *** [cmTryCompileExec3611919997/fast] Error 2
+
+File /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1323731550/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1323731550.dir/build.make CMakeFiles/cmTryCompileExec1323731550.dir/build
+make[1]: Entering directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1323731550.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1323731550.dir/CheckSymbolExists.c.o   -c /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1323731550
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1323731550.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1323731550.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1323731550 -rdynamic 
+CMakeFiles/cmTryCompileExec1323731550.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1323731550] Error 1
+make: *** [cmTryCompileExec1323731550/fast] Error 2
+
+File /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

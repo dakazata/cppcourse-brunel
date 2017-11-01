@@ -1,0 +1,4 @@
+/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/neuron.dir
+/home/localguest/Documents/ProgBA3/Neuron1/googletest/CMakeFiles/gtest.dir
+/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/neurontest.dir
+/home/localguest/Documents/ProgBA3/Neuron1/googletest/CMakeFiles/gtest_main.dir
