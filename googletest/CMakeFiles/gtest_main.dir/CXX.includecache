@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/src/gtest_main.cc
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/src/gtest_main.cc
 stdio.h
 -
 gtest/gtest.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/src/gtest/gtest.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/src/gtest/gtest.h
 
 googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

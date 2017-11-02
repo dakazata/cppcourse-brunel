@@ -6,29 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.cpp
-Buffer.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.hpp
-iostream
--
-cassert
--
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.hpp
-vector
--
-string
--
-Constants.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
-
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
-
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.cpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp
 iostream
 -
 Neuron.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
 cmath
 -
 cassert
@@ -36,27 +20,27 @@ cassert
 random
 -
 
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
 vector
 -
 string
 -
-Buffer.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.hpp
 Constants.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 
-/home/localguest/Documents/ProgBA3/Neuron1/NeuronTests.cpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/NeuronTests.cpp
 googletest/include/gtest/gtest.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest.h
 Neuron.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
 vector
 -
 cmath
 -
+iostream
+-
 
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest.h
 limits
 -
 ostream
@@ -64,25 +48,25 @@ ostream
 vector
 -
 gtest/internal/gtest-internal.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/internal/gtest-internal.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/internal/gtest-internal.h
 gtest/internal/gtest-string.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/internal/gtest-string.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/internal/gtest-string.h
 gtest/gtest-death-test.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest-death-test.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-death-test.h
 gtest/gtest-message.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest-message.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-message.h
 gtest/gtest-param-test.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest-param-test.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-param-test.h
 gtest/gtest-printers.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest-printers.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-printers.h
 gtest/gtest_prod.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest_prod.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest_prod.h
 gtest/gtest-test-part.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest-test-part.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-test-part.h
 gtest/gtest-typed-test.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest-typed-test.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-typed-test.h
 gtest/gtest_pred_impl.h
-/home/localguest/Documents/ProgBA3/Neuron1/googletest/include/gtest/gtest/gtest_pred_impl.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest_pred_impl.h
 
 googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

@@ -1,4 +1,4 @@
-# Install script for directory: /home/localguest/Documents/ProgBA3/Neuron1
+# Install script for directory: /home/INTRANET/zarza/myfiles/cppcourse-brunel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/localguest/Documents/ProgBA3/Neuron1/googletest/cmake_install.cmake")
+  include("/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/localguest/Documents/ProgBA3/Neuron1/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/INTRANET/zarza/myfiles/cppcourse-brunel/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

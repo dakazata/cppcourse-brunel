@@ -47,10 +47,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/localguest/Documents/ProgBA3/Neuron1
+CMAKE_SOURCE_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/localguest/Documents/ProgBA3/Neuron1
+CMAKE_BINARY_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
 
 #=============================================================================
 # Target rules for target CMakeFiles/neuron.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/localguest/Documents/ProgBA3/Neuron1
 CMakeFiles/neuron.dir/all:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/depend
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles  3 4 5 6 7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  3 4 5 6
 	@echo "Built target neuron"
 .PHONY : CMakeFiles/neuron.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/neuron.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/neuron.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/neuron.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
 .PHONY : CMakeFiles/neuron.dir/rule
 
 # Convenience name for target.
@@ -95,7 +95,7 @@ CMakeFiles/neurontest.dir/all: googletest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/neurontest.dir/all: googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/depend
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles  8 9 10
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  7 8
 	@echo "Built target neurontest"
 .PHONY : CMakeFiles/neurontest.dir/all
 
@@ -105,9 +105,9 @@ all: CMakeFiles/neurontest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/neurontest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/neurontest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
 .PHONY : CMakeFiles/neurontest.dir/rule
 
 # Convenience name for target.
@@ -147,7 +147,7 @@ googletest/preinstall:
 googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  1
 	@echo "Built target gtest"
 .PHONY : googletest/CMakeFiles/gtest.dir/all
 
@@ -157,9 +157,9 @@ all: googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
 .PHONY : googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -182,7 +182,7 @@ clean: googletest/CMakeFiles/gtest.dir/clean
 googletest/CMakeFiles/gtest_main.dir/all: googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  2
 	@echo "Built target gtest_main"
 .PHONY : googletest/CMakeFiles/gtest_main.dir/all
 
@@ -192,9 +192,9 @@ all: googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
 .PHONY : googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.

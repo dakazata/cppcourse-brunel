@@ -42,10 +42,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/localguest/Documents/ProgBA3/Neuron1
+CMAKE_SOURCE_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/localguest/Documents/ProgBA3/Neuron1
+CMAKE_BINARY_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -82,9 +82,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -162,33 +162,6 @@ gtest_main: cmake_check_build_system
 gtest_main/fast:
 	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
-
-Buffer.o: Buffer.cpp.o
-.PHONY : Buffer.o
-
-# target to build an object file
-Buffer.cpp.o:
-	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Buffer.cpp.o
-	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Buffer.cpp.o
-.PHONY : Buffer.cpp.o
-
-Buffer.i: Buffer.cpp.i
-.PHONY : Buffer.i
-
-# target to preprocess a source file
-Buffer.cpp.i:
-	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Buffer.cpp.i
-	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Buffer.cpp.i
-.PHONY : Buffer.cpp.i
-
-Buffer.s: Buffer.cpp.s
-.PHONY : Buffer.s
-
-# target to generate assembly for a file
-Buffer.cpp.s:
-	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Buffer.cpp.s
-	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Buffer.cpp.s
-.PHONY : Buffer.cpp.s
 
 Network.o: Network.cpp.o
 .PHONY : Network.o
@@ -326,9 +299,6 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... Buffer.o"
-	@echo "... Buffer.i"
-	@echo "... Buffer.s"
 	@echo "... Network.o"
 	@echo "... Network.i"
 	@echo "... Network.s"

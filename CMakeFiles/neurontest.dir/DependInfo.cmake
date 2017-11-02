@@ -4,16 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/localguest/Documents/ProgBA3/Neuron1/Buffer.cpp" "/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/neurontest.dir/Buffer.cpp.o"
-  "/home/localguest/Documents/ProgBA3/Neuron1/Neuron.cpp" "/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/neurontest.dir/Neuron.cpp.o"
-  "/home/localguest/Documents/ProgBA3/Neuron1/NeuronTests.cpp" "/home/localguest/Documents/ProgBA3/Neuron1/CMakeFiles/neurontest.dir/NeuronTests.cpp.o"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp" "/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neurontest.dir/Neuron.cpp.o"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/NeuronTests.cpp" "/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neurontest.dir/NeuronTests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/localguest/Documents/ProgBA3/Neuron1/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/localguest/Documents/ProgBA3/Neuron1/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

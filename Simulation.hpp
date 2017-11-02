@@ -7,7 +7,7 @@
 class Simulation
 {
 	private:
-		int simulation_time_;
+		//double simulation_time_; //in steps
 		
 	public:
 	

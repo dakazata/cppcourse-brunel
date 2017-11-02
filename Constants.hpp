@@ -6,7 +6,7 @@
  */ 
 
 //SIMULATION CONSTANTS
-const long SIM_END_TIME (1000);				//!< the max time of simulation (1 second)
+const double SIM_END_TIME (1000);			//!< the maximum time of simulation (1 second)
 const long CURRENT_START (0);				//!< time at which external current starts running
 const long CURRENT_END (1000);				//!< time at which external current stops running
 
@@ -30,7 +30,7 @@ const int D_STEPS(D / H);					//!< time delay in steps
 const int C_EXCITATORY (N_EXCITATORY * 0.1);				//!< number of excitatory connections for each neuron
 const int C_INHIBITORY (N_INHIBITORY * 0.1);				//!< number of inhibitory connections for each neuron	
 const int C_TOTAL (C_EXCITATORY + C_INHIBITORY);			//!< number of total connections for each neuron	
-const int ETA (2.0);						//!< constant for random background noise
+const int ETA (2.0);										//!< constant for random background noise
 const double V_EXT  (ETA * THR_POT / (J_AMP_EXCIT * TAU));	//!< constant for random background noise 
 
 

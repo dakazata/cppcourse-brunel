@@ -11,17 +11,30 @@ Neuron::Neuron(int id ,string typeneurone , double courant)
 	memb_pot_(0.0),
 	nb_spikes_(0),
 	i_ext_(courant),
-	//refractory_(false),
 	clock_(0),
 	t_spike_(0),
 	type_ (typeneurone),
-	spike_times_(),
 	targets_(),
-	buffer_()
+	buffer_(), 
+	potentials_()
 {
 	assert(TAU != 0);
 	c1_ = exp(- H / TAU);
 	c2_= R*(1.0 - c1_);
+	
+	for (int i(0); i <= D_STEPS ; i++)
+	{
+		buffer_.push_back(0);
+	}
+	
+	if (type_ == "excitatory")
+	{
+		j_ = J_AMP_EXCIT;
+	}
+	else if (type_ == "inhibitory")
+	{
+		j_ = J_AMP_INHIB;
+	}
 }
 
 int Neuron::getId() const
@@ -38,18 +51,18 @@ int Neuron::getNbSpikes() const
 {
 	return nb_spikes_;
 }
-
+/*
 vector<double> Neuron::getSpikeTimes() const
 {
 	return spike_times_;
 }
-
+*/
 vector<int> Neuron::getTargets() const
 {
 	return targets_;
 }
 
-Buffer Neuron::getBuffer() const
+vector<double> Neuron::getBuffer() const
 {
 	return buffer_;
 }
@@ -57,6 +70,16 @@ Buffer Neuron::getBuffer() const
 string Neuron::getType() const
 {
 	return type_;
+}
+
+double Neuron::getJ() const
+{
+	return j_;
+}
+
+vector<double> Neuron::getPotentials() const
+{
+	return potentials_;
 }
 
 void Neuron::setId(int i)
@@ -73,22 +96,42 @@ void Neuron::setMembranePotential(double pot)
 {
 	memb_pot_ = pot;
 }
-/*		
-bool Neuron::isRefractory()
+
+double Neuron::solveMembEquation(double current)
 {
-	return refractory_;
-}
-*/
-double Neuron::solveMembEquation()
-{
-	
-	return (c1_ * memb_pot_) + (i_ext_ * c2_);
+	return (c1_ * memb_pot_) + (current * c2_);
 }
 
-void Neuron::addSpikeTime(double time)
+///Buffer methods
+void Neuron::resetBufferValue(long time)
 {
-	spike_times_.push_back(time);
+	buffer_[index(time)] = 0.0;
 }
+
+unsigned int Neuron::index(long time)
+{
+	return time % (D_STEPS+ 1);
+}
+
+/*unsigned int Neuron::getJ(long time)
+{
+	return buffer_[index(time)];
+}*/
+
+/*void Neuron::addJ(unsigned long time, string type)
+{
+	assert(index(time + D_STEPS) <= buffer_.size());
+	
+	if (type == "excitatory")
+	{
+		buffer_[index(time + D_STEPS)] += J_AMP_EXCIT;
+	} 
+	else if (type == "inhibitory")
+	{
+		buffer_[index(time + D_STEPS)] += J_AMP_INHIB;
+	}
+	buffer_[index(time + D_STEPS)] += 1;
+}*/
 
 void Neuron::addTarget(int target_id)
 {
@@ -96,9 +139,18 @@ void Neuron::addTarget(int target_id)
 	targets_.push_back(target_id);
 }
 
-void Neuron::receive(unsigned long time , string type)
+void Neuron::receive(unsigned long time , double j_amp)
 {
-	buffer_.addJ(time , type);
+	assert(index(time + D_STEPS) <= buffer_.size());
+	buffer_[index(time + D_STEPS)] += j_amp;
+}
+
+void Neuron::updatePot(double current)
+{
+	static random_device rd;
+	static mt19937 gen(rd());
+	static poisson_distribution<int> pois (V_EXT);
+	memb_pot_ = solveMembEquation(current) + buffer_[index(clock_)] + pois(gen)* J_AMP_EXCIT;
 }
 
 ///*Si la neurone is refractory we set its potential to 0
@@ -106,38 +158,36 @@ void Neuron::receive(unsigned long time , string type)
 ///we save this spike time in the vectors spike_times_, we augment the 
 ///nb_spikes, and we set the variable t_spike to the current time;
 
-bool Neuron::update(unsigned int time, unsigned int steps, double current)
+bool Neuron::update(unsigned int steps, double current)
 {
+	if (steps < 1) return false;
+	
 	bool spike(false);
-	clock_ = time;
-	unsigned int t_stop = clock_ + steps;
-	i_ext_ = current;
 	
-	static random_device rd;
-	static mt19937 gen(rd());
-	static poisson_distribution<int> pois (2);//V_EXT * C_EXCITATORY * H * J_AMP_EXCIT);
-	
-	while (clock_ < t_stop)
+	for (unsigned int i(0) ; i < steps ; i++)
 	{
 		if (memb_pot_ > THR_POT)
 		{
-			addSpikeTime(clock_*H);
 			nb_spikes_++;
 			spike = true;
 			t_spike_ = clock_;
-			//refractory_ = true;		
-		} 
+		} 		
 		
 		if ((clock_ - t_spike_) < (REF_TIME / H))
 		{
 			setMembranePotential(RESET_POT);			
-		} else {
-			memb_pot_ = solveMembEquation()  + (buffer_.getJ(time)) + pois(gen)* J_AMP_EXCIT;
-			buffer_.resetValue(time);
+		} 
+		else 
+		{
+			updatePot(current);
 		}
-
-		clock_++;
+		
+		resetBufferValue(clock_);
+		
+		++clock_;
+		
+		//potentials_.push_back(memb_pot_);
 	}
-	
+		
 	return spike;
 }

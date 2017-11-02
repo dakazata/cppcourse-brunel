@@ -10,7 +10,10 @@ using namespace std;
 
 //Constructor
 Network::Network(int totalneurons)
-	: nb_neurons_(totalneurons)
+	: nb_neurons_(totalneurons),
+	  spike_times_(),
+	  neuron_idx_(),
+	  targets_(N_TOTAL, vector<unsigned int> ())
 {
 	cout << "Ceating network" << endl;
 	///remplissage avec neurones excitatoires et inhibitoires
@@ -25,7 +28,7 @@ Network::Network(int totalneurons)
 	//boucle se parcourt N_INHIB fois
 	for (int i(0) ; i < (nb_neurons_ * 0.2) ; i++)
 	{
-		Neuron* n = new Neuron(i + 10000, "inhibitory");
+		Neuron* n = new Neuron(i + 80, "inhibitory");
 		addNeuron(n);
 		assert(i < N_INHIBITORY);
 	}
@@ -62,49 +65,62 @@ void Network::makeTargets()
 	//random generator 
 	random_device rd;
 	mt19937 gen(rd());
-	uniform_int_distribution<> disE(0, 9999);
-	uniform_int_distribution<> disI(10000 , 12499);
-
-	//premiere boucle parcourt toutes les neurones 
-	for (auto& n : neurons_)
+	uniform_int_distribution<> disE(0 , 9999);
+	uniform_int_distribution<> disI(10000, 12499);
+	
+	//for every neuron
+	//targets size is N_TOTAL
+	for (size_t n(0); n < nb_neurons_ ; n++)
 	{
 		for (size_t i(0) ; i <= C_EXCITATORY ; i++)
 		{
 			int indice = disE(gen);
-			neurons_[indice]->addTarget(n->getId());
+			targets_[indice].push_back(n);
 		}
 		
 		for (size_t i(0) ; i <= C_INHIBITORY ; i++)
 		{
 			int indice = disI(gen);
-			neurons_[indice]->addTarget(n->getId());
-		}		
+			targets_[indice].push_back(n);
+		}	
 	}
+	cout << "finished making targets" << endl;
 }
 
 //update
-void Network::update(unsigned int time, unsigned int steps, double current)
+//time given in steps
+void Network::update(unsigned int simulation_steps)//(unsigned int time, unsigned int steps, double current)
 {
+	cout << "Updating Network ..." << endl;
+	unsigned int steps_made(0);
 	bool spike(false);
-	unsigned int t_stop = time + steps;
+	//unsigned int t_stop = time + steps;
 	
-	for (unsigned int i(time) ; i < t_stop ; i++)
+	while(steps_made < simulation_steps)
 	{
+		cout << steps_made << " steps made" << endl;
+		
+		assert(!neurons_.empty());
 		//for every neuron in the network
-		for (auto n: neurons_)
+		for (size_t i (0); i < neurons_.size(); i++)//Neuron* n : neurons_)
 		{	
-			spike = n->update(time, steps, current); //current is normally 0 when we update network
+			assert(neurons_[i] != nullptr);
+		
+			spike = neurons_[i]->update(1); //current is normally 0 when we update network
 		
 			if (spike)
 			{	
-				//on envoir a tous les neurones avec les id presentes dans le targets de la neurone
-				for (auto& id: n->getTargets())
+				for (auto& t :targets_[i])
 				{
-					neurons_[id]->receive(time , n->getType());
+					neurons_[t]->receive(steps_made + D_STEPS , neurons_[t]->getJ());
 				}
+				//on envoie a tous les neurones avec les id presentes dans le targets de la neurone
+				
+				spike_times_.push_back(steps_made *H);
+				neuron_idx_.push_back(i);
 			}
-		}
-		++time;
+		}			
+		++steps_made;
 	}
 }
 
@@ -114,13 +130,18 @@ void Network::writeFile() const
 	ofstream textfile;
 	textfile.open("Spike_Times.txt");	
 	
-	for (size_t i(0) ; i < neurons_.size() ; i++)
+	assert(spike_times_.size() == neuron_idx_.size());
+	for (size_t i(0) ; i < spike_times_.size() ; i++)
 	{
-		for (auto spiket : neurons_[i]->getSpikeTimes())
-		{
-			textfile << spiket << '\t' << i+1 << '\n' ;
-		}
+		textfile << spike_times_[i] << '\t' << neuron_idx_[i] << '\n' ;
 	}
+	
+	///NELVE LE
+	for (size_t i(0) ; i< neurons_.size(); i+=100)
+	{
+		textfile << neurons_[i]->getNbSpikes() << endl;
+	}
+	
 	
 	textfile.close();
 }

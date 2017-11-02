@@ -6,27 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.cpp
-Buffer.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.hpp
-iostream
--
-cassert
--
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.hpp
-vector
--
-string
--
-Constants.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
-
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
-
-/home/localguest/Documents/ProgBA3/Neuron1/Network.cpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp
 Network.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Network.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
 iostream
 -
 fstream
@@ -38,19 +22,19 @@ cassert
 random
 -
 
-/home/localguest/Documents/ProgBA3/Neuron1/Network.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
 vector
 -
 Neuron.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
 Constants.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.cpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp
 iostream
 -
 Neuron.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
 cmath
 -
 cassert
@@ -58,31 +42,29 @@ cassert
 random
 -
 
-/home/localguest/Documents/ProgBA3/Neuron1/Neuron.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
 vector
 -
 string
 -
-Buffer.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Buffer.hpp
 Constants.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 
-/home/localguest/Documents/ProgBA3/Neuron1/Simulation.cpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.cpp
 Simulation.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Simulation.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.hpp
 fstream
 -
 iostream
 -
 
-/home/localguest/Documents/ProgBA3/Neuron1/Simulation.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.hpp
 Constants.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Constants.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 Network.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Network.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
 
-/home/localguest/Documents/ProgBA3/Neuron1/main.cpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/main.cpp
 iostream
 -
 fstream
@@ -90,5 +72,5 @@ fstream
 cassert
 -
 Simulation.hpp
-/home/localguest/Documents/ProgBA3/Neuron1/Simulation.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.hpp
 
