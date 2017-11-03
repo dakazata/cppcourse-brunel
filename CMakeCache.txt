@@ -157,13 +157,13 @@ Neuron_SOURCE_DIR:STATIC=/home/INTRANET/zarza/myfiles/cppcourse-brunel
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest
+gtest_BINARY_DIR:STATIC=/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest
 
 //Dependencies for the target
 gtest_LIB_DEPENDS:STATIC=general;-pthread;
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest
+gtest_SOURCE_DIR:STATIC=/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF

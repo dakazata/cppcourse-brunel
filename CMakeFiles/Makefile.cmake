@@ -11,8 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.2.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.2.3/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "googletest/CMakeLists.txt"
-  "googletest/cmake/internal_utils.cmake"
+  "gtest/CMakeLists.txt"
+  "gtest/cmake/internal_utils.cmake"
   "/usr/local/share/cmake-3.2/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.2/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.2/Modules/CMakeCommonLanguageInclude.cmake"
@@ -46,13 +46,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/neuron.dir/DependInfo.cmake"
   "CMakeFiles/neurontest.dir/DependInfo.cmake"
-  "googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )

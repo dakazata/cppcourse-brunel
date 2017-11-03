@@ -25,6 +25,8 @@ random
 /home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
 vector
 -
+array
+-
 Neuron.hpp
 /home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
 Constants.hpp

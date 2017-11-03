@@ -147,7 +147,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================
@@ -160,7 +160,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 Network.o: Network.cpp.o
@@ -169,6 +169,7 @@ Network.o: Network.cpp.o
 # target to build an object file
 Network.cpp.o:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.o
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Network.cpp.o
 .PHONY : Network.cpp.o
 
 Network.i: Network.cpp.i
@@ -177,6 +178,7 @@ Network.i: Network.cpp.i
 # target to preprocess a source file
 Network.cpp.i:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.i
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Network.cpp.i
 .PHONY : Network.cpp.i
 
 Network.s: Network.cpp.s
@@ -185,6 +187,7 @@ Network.s: Network.cpp.s
 # target to generate assembly for a file
 Network.cpp.s:
 	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.s
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Network.cpp.s
 .PHONY : Network.cpp.s
 
 Neuron.o: Neuron.cpp.o

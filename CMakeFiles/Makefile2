@@ -91,11 +91,11 @@ clean: CMakeFiles/neuron.dir/clean
 # Target rules for target CMakeFiles/neurontest.dir
 
 # All Build rule for target.
-CMakeFiles/neurontest.dir/all: googletest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/neurontest.dir/all: googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/neurontest.dir/all: gtest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/neurontest.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/depend
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  7 8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  7 8 9
 	@echo "Built target neurontest"
 .PHONY : CMakeFiles/neurontest.dir/all
 
@@ -105,7 +105,7 @@ all: CMakeFiles/neurontest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/neurontest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/neurontest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
 .PHONY : CMakeFiles/neurontest.dir/rule
@@ -124,90 +124,90 @@ clean: CMakeFiles/neurontest.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory googletest
+# Directory level rules for directory gtest
 
 # Convenience name for "all" pass in the directory.
-googletest/all: googletest/CMakeFiles/gtest.dir/all
-googletest/all: googletest/CMakeFiles/gtest_main.dir/all
-.PHONY : googletest/all
+gtest/all: gtest/CMakeFiles/gtest.dir/all
+gtest/all: gtest/CMakeFiles/gtest_main.dir/all
+.PHONY : gtest/all
 
 # Convenience name for "clean" pass in the directory.
-googletest/clean: googletest/CMakeFiles/gtest.dir/clean
-googletest/clean: googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : googletest/clean
+gtest/clean: gtest/CMakeFiles/gtest.dir/clean
+gtest/clean: gtest/CMakeFiles/gtest_main.dir/clean
+.PHONY : gtest/clean
 
 # Convenience name for "preinstall" pass in the directory.
-googletest/preinstall:
-.PHONY : googletest/preinstall
+gtest/preinstall:
+.PHONY : gtest/preinstall
 
 #=============================================================================
-# Target rules for target googletest/CMakeFiles/gtest.dir
+# Target rules for target gtest/CMakeFiles/gtest.dir
 
 # All Build rule for target.
-googletest/CMakeFiles/gtest.dir/all:
-	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/depend
-	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/build
+gtest/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  1
 	@echo "Built target gtest"
-.PHONY : googletest/CMakeFiles/gtest.dir/all
+.PHONY : gtest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
-all: googletest/CMakeFiles/gtest.dir/all
+all: gtest/CMakeFiles/gtest.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
-.PHONY : googletest/CMakeFiles/gtest.dir/rule
+.PHONY : gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
-gtest: googletest/CMakeFiles/gtest.dir/rule
+gtest: gtest/CMakeFiles/gtest.dir/rule
 .PHONY : gtest
 
 # clean rule for target.
-googletest/CMakeFiles/gtest.dir/clean:
-	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/clean
-.PHONY : googletest/CMakeFiles/gtest.dir/clean
+gtest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/clean
+.PHONY : gtest/CMakeFiles/gtest.dir/clean
 
 # clean rule for target.
-clean: googletest/CMakeFiles/gtest.dir/clean
+clean: gtest/CMakeFiles/gtest.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target googletest/CMakeFiles/gtest_main.dir
+# Target rules for target gtest/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
-googletest/CMakeFiles/gtest_main.dir/all: googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/build
+gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles  2
 	@echo "Built target gtest_main"
-.PHONY : googletest/CMakeFiles/gtest_main.dir/all
+.PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
-all: googletest/CMakeFiles/gtest_main.dir/all
+all: gtest/CMakeFiles/gtest_main.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles 0
-.PHONY : googletest/CMakeFiles/gtest_main.dir/rule
+.PHONY : gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
-gtest_main: googletest/CMakeFiles/gtest_main.dir/rule
+gtest_main: gtest/CMakeFiles/gtest_main.dir/rule
 .PHONY : gtest_main
 
 # clean rule for target.
-googletest/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : googletest/CMakeFiles/gtest_main.dir/clean
+gtest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/clean
+.PHONY : gtest/CMakeFiles/gtest_main.dir/clean
 
 # clean rule for target.
-clean: googletest/CMakeFiles/gtest_main.dir/clean
+clean: gtest/CMakeFiles/gtest_main.dir/clean
 .PHONY : clean
 
 #=============================================================================

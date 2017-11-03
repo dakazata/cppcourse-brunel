@@ -9,17 +9,19 @@ Simulation::Simulation()
 
 void Simulation::run()
 {
-	//create network
-	Network net(N_TOTAL);
+	///Creation of network
+	Network* net = new Network(N_TOTAL);
 	
-	//create targets
-	net.makeTargets();
+	///Creation of targets in the network
+	net->makeTargets();
 	
 	cout << "Running simulation ... " << endl;
 	
-	net.update(SIM_END_TIME / H);
+	///Launches the network updates
+	net->update(SIM_END_TIME / H);
 	
-	net.writeFile();
+	///Writes onto an external file
+	net->writeFile();
 	
 }
 

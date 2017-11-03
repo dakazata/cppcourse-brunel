@@ -95,20 +95,45 @@ CMakeFiles/neurontest.dir/Neuron.cpp.o.provides: CMakeFiles/neurontest.dir/Neuro
 
 CMakeFiles/neurontest.dir/Neuron.cpp.o.provides.build: CMakeFiles/neurontest.dir/Neuron.cpp.o
 
+CMakeFiles/neurontest.dir/Network.cpp.o: CMakeFiles/neurontest.dir/flags.make
+CMakeFiles/neurontest.dir/Network.cpp.o: Network.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurontest.dir/Network.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurontest.dir/Network.cpp.o -c /home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp
+
+CMakeFiles/neurontest.dir/Network.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurontest.dir/Network.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp > CMakeFiles/neurontest.dir/Network.cpp.i
+
+CMakeFiles/neurontest.dir/Network.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurontest.dir/Network.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp -o CMakeFiles/neurontest.dir/Network.cpp.s
+
+CMakeFiles/neurontest.dir/Network.cpp.o.requires:
+.PHONY : CMakeFiles/neurontest.dir/Network.cpp.o.requires
+
+CMakeFiles/neurontest.dir/Network.cpp.o.provides: CMakeFiles/neurontest.dir/Network.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/Network.cpp.o.provides.build
+.PHONY : CMakeFiles/neurontest.dir/Network.cpp.o.provides
+
+CMakeFiles/neurontest.dir/Network.cpp.o.provides.build: CMakeFiles/neurontest.dir/Network.cpp.o
+
 # Object files for target neurontest
 neurontest_OBJECTS = \
 "CMakeFiles/neurontest.dir/NeuronTests.cpp.o" \
-"CMakeFiles/neurontest.dir/Neuron.cpp.o"
+"CMakeFiles/neurontest.dir/Neuron.cpp.o" \
+"CMakeFiles/neurontest.dir/Network.cpp.o"
 
 # External object files for target neurontest
 neurontest_EXTERNAL_OBJECTS =
 
 neurontest: CMakeFiles/neurontest.dir/NeuronTests.cpp.o
 neurontest: CMakeFiles/neurontest.dir/Neuron.cpp.o
+neurontest: CMakeFiles/neurontest.dir/Network.cpp.o
 neurontest: CMakeFiles/neurontest.dir/build.make
-neurontest: googletest/libgtest.a
-neurontest: googletest/libgtest_main.a
-neurontest: googletest/libgtest.a
+neurontest: gtest/libgtest.a
+neurontest: gtest/libgtest_main.a
+neurontest: gtest/libgtest.a
 neurontest: CMakeFiles/neurontest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable neurontest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neurontest.dir/link.txt --verbose=$(VERBOSE)
@@ -119,6 +144,7 @@ CMakeFiles/neurontest.dir/build: neurontest
 
 CMakeFiles/neurontest.dir/requires: CMakeFiles/neurontest.dir/NeuronTests.cpp.o.requires
 CMakeFiles/neurontest.dir/requires: CMakeFiles/neurontest.dir/Neuron.cpp.o.requires
+CMakeFiles/neurontest.dir/requires: CMakeFiles/neurontest.dir/Network.cpp.o.requires
 .PHONY : CMakeFiles/neurontest.dir/requires
 
 CMakeFiles/neurontest.dir/clean:

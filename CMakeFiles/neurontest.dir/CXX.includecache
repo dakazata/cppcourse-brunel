@@ -8,6 +8,30 @@
 
 /home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp
+Network.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
+iostream
+-
+fstream
+-
+vector
+-
+cassert
+-
+random
+-
+
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
+vector
+-
+array
+-
+Neuron.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
+Constants.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
+
 /home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp
 iostream
 -
@@ -29,10 +53,12 @@ Constants.hpp
 /home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
 
 /home/INTRANET/zarza/myfiles/cppcourse-brunel/NeuronTests.cpp
-googletest/include/gtest/gtest.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest.h
+gtest/include/gtest/gtest.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest.h
 Neuron.hpp
 /home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
+Network.hpp
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
 vector
 -
 cmath
@@ -40,7 +66,7 @@ cmath
 iostream
 -
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest.h
 limits
 -
 ostream
@@ -48,49 +74,49 @@ ostream
 vector
 -
 gtest/internal/gtest-internal.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/internal/gtest-internal.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/internal/gtest-internal.h
 gtest/internal/gtest-string.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/internal/gtest-string.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/internal/gtest-string.h
 gtest/gtest-death-test.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-death-test.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest-death-test.h
 gtest/gtest-message.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-message.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest-message.h
 gtest/gtest-param-test.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-param-test.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest-param-test.h
 gtest/gtest-printers.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-printers.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest-printers.h
 gtest/gtest_prod.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest_prod.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest_prod.h
 gtest/gtest-test-part.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-test-part.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest-test-part.h
 gtest/gtest-typed-test.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest-typed-test.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest-typed-test.h
 gtest/gtest_pred_impl.h
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/googletest/include/gtest/gtest/gtest_pred_impl.h
+/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/include/gtest/gtest/gtest_pred_impl.h
 
-googletest/include/gtest/gtest-death-test.h
+gtest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
-googletest/include/gtest/gtest/internal/gtest-death-test-internal.h
+gtest/include/gtest/gtest/internal/gtest-death-test-internal.h
 
-googletest/include/gtest/gtest-message.h
+gtest/include/gtest/gtest-message.h
 limits
 -
 gtest/internal/gtest-port.h
-googletest/include/gtest/gtest/internal/gtest-port.h
+gtest/include/gtest/gtest/internal/gtest-port.h
 
-googletest/include/gtest/gtest-param-test.h
+gtest/include/gtest/gtest-param-test.h
 gtest/internal/gtest-port.h
-googletest/include/gtest/gtest/internal/gtest-port.h
+gtest/include/gtest/gtest/internal/gtest-port.h
 utility
 -
 gtest/internal/gtest-internal.h
-googletest/include/gtest/gtest/internal/gtest-internal.h
+gtest/include/gtest/gtest/internal/gtest-internal.h
 gtest/internal/gtest-param-util.h
-googletest/include/gtest/gtest/internal/gtest-param-util.h
+gtest/include/gtest/gtest/internal/gtest-param-util.h
 gtest/internal/gtest-param-util-generated.h
-googletest/include/gtest/gtest/internal/gtest-param-util-generated.h
+gtest/include/gtest/gtest/internal/gtest-param-util-generated.h
 
-googletest/include/gtest/gtest-printers.h
+gtest/include/gtest/gtest-printers.h
 ostream
 -
 sstream
@@ -102,51 +128,51 @@ utility
 vector
 -
 gtest/internal/gtest-port.h
-googletest/include/gtest/gtest/internal/gtest-port.h
+gtest/include/gtest/gtest/internal/gtest-port.h
 gtest/internal/gtest-internal.h
-googletest/include/gtest/gtest/internal/gtest-internal.h
+gtest/include/gtest/gtest/internal/gtest-internal.h
 tuple
 -
 gtest/internal/custom/gtest-printers.h
-googletest/include/gtest/gtest/internal/custom/gtest-printers.h
+gtest/include/gtest/gtest/internal/custom/gtest-printers.h
 
-googletest/include/gtest/gtest-test-part.h
+gtest/include/gtest/gtest-test-part.h
 iosfwd
 -
 vector
 -
 gtest/internal/gtest-internal.h
-googletest/include/gtest/gtest/internal/gtest-internal.h
+gtest/include/gtest/gtest/internal/gtest-internal.h
 gtest/internal/gtest-string.h
-googletest/include/gtest/gtest/internal/gtest-string.h
+gtest/include/gtest/gtest/internal/gtest-string.h
 
-googletest/include/gtest/gtest-typed-test.h
+gtest/include/gtest/gtest-typed-test.h
 gtest/internal/gtest-port.h
-googletest/include/gtest/gtest/internal/gtest-port.h
+gtest/include/gtest/gtest/internal/gtest-port.h
 gtest/internal/gtest-type-util.h
-googletest/include/gtest/gtest/internal/gtest-type-util.h
+gtest/include/gtest/gtest/internal/gtest-type-util.h
 
-googletest/include/gtest/gtest_pred_impl.h
+gtest/include/gtest/gtest_pred_impl.h
 
-googletest/include/gtest/gtest_prod.h
+gtest/include/gtest/gtest_prod.h
 
-googletest/include/gtest/internal/custom/gtest-port.h
+gtest/include/gtest/internal/custom/gtest-port.h
 
-googletest/include/gtest/internal/custom/gtest-printers.h
+gtest/include/gtest/internal/custom/gtest-printers.h
 
-googletest/include/gtest/internal/gtest-death-test-internal.h
+gtest/include/gtest/internal/gtest-death-test-internal.h
 gtest/internal/gtest-internal.h
-googletest/include/gtest/internal/gtest/internal/gtest-internal.h
+gtest/include/gtest/internal/gtest/internal/gtest-internal.h
 stdio.h
 -
 
-googletest/include/gtest/internal/gtest-filepath.h
+gtest/include/gtest/internal/gtest-filepath.h
 gtest/internal/gtest-string.h
-googletest/include/gtest/internal/gtest/internal/gtest-string.h
+gtest/include/gtest/internal/gtest/internal/gtest-string.h
 
-googletest/include/gtest/internal/gtest-internal.h
+gtest/include/gtest/internal/gtest-internal.h
 gtest/internal/gtest-port.h
-googletest/include/gtest/internal/gtest/internal/gtest-port.h
+gtest/include/gtest/internal/gtest/internal/gtest-port.h
 stdlib.h
 -
 sys/types.h
@@ -176,29 +202,29 @@ string
 vector
 -
 gtest/gtest-message.h
-googletest/include/gtest/internal/gtest/gtest-message.h
+gtest/include/gtest/internal/gtest/gtest-message.h
 gtest/internal/gtest-string.h
-googletest/include/gtest/internal/gtest/internal/gtest-string.h
+gtest/include/gtest/internal/gtest/internal/gtest-string.h
 gtest/internal/gtest-filepath.h
-googletest/include/gtest/internal/gtest/internal/gtest-filepath.h
+gtest/include/gtest/internal/gtest/internal/gtest-filepath.h
 gtest/internal/gtest-type-util.h
-googletest/include/gtest/internal/gtest/internal/gtest-type-util.h
+gtest/include/gtest/internal/gtest/internal/gtest-type-util.h
 
-googletest/include/gtest/internal/gtest-linked_ptr.h
+gtest/include/gtest/internal/gtest-linked_ptr.h
 stdlib.h
 -
 assert.h
 -
 gtest/internal/gtest-port.h
-googletest/include/gtest/internal/gtest/internal/gtest-port.h
+gtest/include/gtest/internal/gtest/internal/gtest-port.h
 
-googletest/include/gtest/internal/gtest-param-util-generated.h
+gtest/include/gtest/internal/gtest-param-util-generated.h
 gtest/internal/gtest-param-util.h
-googletest/include/gtest/internal/gtest/internal/gtest-param-util.h
+gtest/include/gtest/internal/gtest/internal/gtest-param-util.h
 gtest/internal/gtest-port.h
-googletest/include/gtest/internal/gtest/internal/gtest-port.h
+gtest/include/gtest/internal/gtest/internal/gtest-port.h
 
-googletest/include/gtest/internal/gtest-param-util.h
+gtest/include/gtest/internal/gtest-param-util.h
 ctype.h
 -
 iterator
@@ -210,19 +236,19 @@ utility
 vector
 -
 gtest/internal/gtest-internal.h
-googletest/include/gtest/internal/gtest/internal/gtest-internal.h
+gtest/include/gtest/internal/gtest/internal/gtest-internal.h
 gtest/internal/gtest-linked_ptr.h
-googletest/include/gtest/internal/gtest/internal/gtest-linked_ptr.h
+gtest/include/gtest/internal/gtest/internal/gtest-linked_ptr.h
 gtest/internal/gtest-port.h
-googletest/include/gtest/internal/gtest/internal/gtest-port.h
+gtest/include/gtest/internal/gtest/internal/gtest-port.h
 gtest/gtest-printers.h
-googletest/include/gtest/internal/gtest/gtest-printers.h
+gtest/include/gtest/internal/gtest/gtest-printers.h
 
-googletest/include/gtest/internal/gtest-port-arch.h
+gtest/include/gtest/internal/gtest-port-arch.h
 winapifamily.h
 -
 
-googletest/include/gtest/internal/gtest-port.h
+gtest/include/gtest/internal/gtest-port.h
 ctype.h
 -
 stddef.h
@@ -254,9 +280,9 @@ utility
 vector
 -
 gtest/internal/gtest-port-arch.h
-googletest/include/gtest/internal/gtest/internal/gtest-port-arch.h
+gtest/include/gtest/internal/gtest/internal/gtest-port-arch.h
 gtest/internal/custom/gtest-port.h
-googletest/include/gtest/internal/gtest/internal/custom/gtest-port.h
+gtest/include/gtest/internal/gtest/internal/custom/gtest-port.h
 direct.h
 -
 io.h
@@ -278,7 +304,7 @@ time.h
 tuple
 -
 gtest/internal/gtest-tuple.h
-googletest/include/gtest/internal/gtest/internal/gtest-tuple.h
+gtest/include/gtest/internal/gtest/internal/gtest-tuple.h
 tuple
 -
 tuple
@@ -290,7 +316,7 @@ tr1/tuple
 tuple
 -
 
-googletest/include/gtest/internal/gtest-string.h
+gtest/include/gtest/internal/gtest-string.h
 mem.h
 -
 string.h
@@ -298,15 +324,15 @@ string.h
 string
 -
 gtest/internal/gtest-port.h
-googletest/include/gtest/internal/gtest/internal/gtest-port.h
+gtest/include/gtest/internal/gtest/internal/gtest-port.h
 
-googletest/include/gtest/internal/gtest-tuple.h
+gtest/include/gtest/internal/gtest-tuple.h
 utility
 -
 
-googletest/include/gtest/internal/gtest-type-util.h
+gtest/include/gtest/internal/gtest-type-util.h
 gtest/internal/gtest-port.h
-googletest/include/gtest/internal/gtest/internal/gtest-port.h
+gtest/include/gtest/internal/gtest/internal/gtest-port.h
 cxxabi.h
 -
 acxx_demangle.h

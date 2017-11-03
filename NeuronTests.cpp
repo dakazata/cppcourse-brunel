@@ -1,5 +1,6 @@
-#include "googletest/include/gtest/gtest.h"
+#include "gtest/include/gtest/gtest.h"
 #include "Neuron.hpp"
+#include "Network.hpp"
 #include <vector>
 #include <cmath>
 #include <iostream>
@@ -64,9 +65,62 @@ int main(int argc, char **argv)
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }
+* */
+
+TEST ( NetworkTest , NumberofConnections )
+{
+	unsigned int nb_neurons (N_TOTAL);
+	Network* net = new Network(nb_neurons);
+	int nb_connections(0);
+	
+	net->makeTargets();
+	
+	vector<vector<unsigned int> > net_targets = net->getTargets();
+	
+	//Check combien des fois la neurone [0] se trouve dans le targets du network
+	for (size_t i(0) ; i < nb_neurons  ; i++)
+	{
+		assert (!net_targets[i].empty());
+		for (size_t j(0) ; j < net_targets[i].size() ; j++)
+		{
+			if (net_targets[i][j] == 0) //looking for neuron 0 being mentioned in the targets vectors
+			{
+				nb_connections++;
+			}
+		}
+	}
+	
+	EXPECT_EQ(nb_connections , C_TOTAL);
+}
+
+TEST( NetworkTest , NumberofSpikes)
+{
+	unsigned int nb_neurons (N_TOTAL);
+	Network* net = new Network(nb_neurons);
+	int nb_spikes(0);
+	
+	net->makeTargets();
+	net->update(1000);  //run for 100 ms
+	
+	vector<unsigned int> spiking_indices = net->getIndices();
+	
+	//Check combien des fois la neurone [0] se trouve dans le targets du network
+	assert (!spiking_indices.empty());
+	for (size_t j(0) ; j < spiking_indices.size() ; j++)
+	{
+		if (spiking_indices[j] == 0) //looking for neuron 0 being mentioned in the targets vectors
+		{
+			nb_spikes++;
+		}
+	}
+		
+	//we expect around 4000 for 1 s. so for 100 ms we expcte around 4
+	EXPECT_NEAR (4000 , nb_spikes , 1);
+}
 
 
-
-///connections faites
-///
-*/
+int main(int argc, char **argv)
+{
+	::testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
+}

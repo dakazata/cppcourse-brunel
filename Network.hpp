@@ -8,6 +8,7 @@
  */
 
 #include <vector>
+#include <array>
 #include "Neuron.hpp"
 #include "Constants.hpp"
 
@@ -17,17 +18,16 @@
  * 
  * Neurons in the network interact via their target connections.
  * Upon spiking a neuron sends a signal to its targets
- *\
  */
 
 class Network
 {
 	private:
-		int nb_neurons_;					//!< Total number of neurons in
-		std::vector<Neuron*> neurons_; 		//!< Points to each neuron in the network
-		std::vector<double> spike_times_;		//!< Keeps all the spikes over the simulation time
-		std::vector<unsigned int> neuron_idx_;	//!< Keeps the indices of the spiking neuron
-		std::vector<std::vector<unsigned int>> targets_; //!< Associates each neuron with its post-synaptic neurons
+		unsigned int nb_neurons_;						//!< Total number of neurons in
+		std::vector<Neuron*> neurons_; 					//!< Points to each neuron in the network
+		std::vector<double> spike_times_;				//!< Keeps all the spikes over the simulation time
+		std::vector<unsigned int> neuron_idx_;			//!< Keeps the indices of the spiking neuron
+		std::vector<std::vector<unsigned int>> targets_;//!< Associates each neuron with its post-synaptic neurons
 		
 		
 	public:
@@ -43,6 +43,32 @@ class Network
 		 */
 		~Network();
 				
+				
+//============================GETTERS===================================
+				
+				
+		//! Getter of neurons_ vector
+		/*!
+		 * \return The vector containing pointers to all neurons in the network
+		 */	
+		std::vector<Neuron*> getNeurons() const;	
+		
+		//! Getter of neuron_idx_ vector
+		/*!
+		 * \return The vector containing the IDs of the neurons that have spiked 
+		 */	
+		std::vector<unsigned int> getIndices() const;
+		
+		//! Getter of targets vector
+		/*!
+		 * \return The vector of vectors indicating the targets of each neuron
+		 */		
+		std::vector<std::vector<unsigned int>> getTargets() const;
+		
+		
+//=====================SPECIFIC NETWORK FUNCTIONS========================
+		
+		
 		//! Add a neuron to the vector neurons_
 		/*! 
 		 * \param neuron points toeward the neuron being added
@@ -63,6 +89,17 @@ class Network
 		 */
 		void setExternalCurrent(double current);
 		
+		//! Writes onto external file
+		/*!
+		 * Writes the spike times and the associated index of neuron
+		 * which is spiking. Data is used to plot graphs.
+		 */
+		void writeFile() const;
+
+
+//==========================UPDATE FUNCTION=============================	
+
+
 		//! Update of the network
 		/*!
 		 * Iterates through the neurons_ vector (each neuron) and updates them.
@@ -75,11 +112,7 @@ class Network
 		 */
 		void update(unsigned int simulation_steps);
 
-		//! Writes onto external file
-		/*! Writes the spike times and the associated index of neuron
-		 * which is spiking. Data is used to plot graphs.
-		 */
-		void writeFile() const;
+		
 };
 
 
