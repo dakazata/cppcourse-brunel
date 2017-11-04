@@ -7,16 +7,18 @@
 using namespace std;
 
 
-Neuron::Neuron(int id ,string typeneurone , double current)
+Neuron::Neuron(int id, bool typeneurone, bool bgnoise , double current)
 	:id_ (id),	
 	nb_spikes_(0),
 	memb_pot_(0.0),
 	i_ext_(current),
 	clock_(0),
-	t_spike_(0),
+	t_spike_(0),   ///Starts at 20 so that neuron does not go straight into refractory state
 	type_ (typeneurone),
+	receivesBGNoise_(bgnoise),
 	buffer_(), 
-	potentials_()
+	potentials_(),
+	spike_times_()
 {
 	///Calculates constants
 	assert(TAU != 0);
@@ -30,11 +32,11 @@ Neuron::Neuron(int id ,string typeneurone , double current)
 	}
 	
 	///Initiates the j_ variable depending on the type_ variable
-	if (type_ == "excitatory")
+	if (type_) ///If true, the neuron is excitatory
 	{
 		j_ = J_AMP_EXCIT;
 	}
-	else if (type_ == "inhibitory")
+	else 
 	{
 		j_ = J_AMP_INHIB;
 	}
@@ -57,14 +59,14 @@ int Neuron::getNbSpikes() const
 	return nb_spikes_;
 }
 
+vector<double> Neuron::getSpikeTimesNeuron() const
+{
+	return spike_times_;
+}
+
 vector<double> Neuron::getBuffer() const
 {
 	return buffer_;
-}
-
-string Neuron::getType() const
-{
-	return type_;
 }
 
 double Neuron::getJ() const
@@ -94,11 +96,17 @@ void Neuron::setMembranePotential(double pot)
 	memb_pot_ = pot;
 }
 
+void Neuron::setBackgroundNoise(bool noise)
+{
+	receivesBGNoise_ = noise;
+}
+
+
 ///SPECIFIC NEURON FUNCTIONS
 
-double Neuron::solveMembEquation()
+bool Neuron::isExcitatory() const
 {
-	return (c1_ * memb_pot_) + (i_ext_ * c2_);
+	return type_;
 }
 
 void Neuron::receive(unsigned long time , double j_amp)
@@ -108,14 +116,19 @@ void Neuron::receive(unsigned long time , double j_amp)
 	buffer_[t_out] += j_amp;
 }
 
-void Neuron::updatePot()
-{
-	static random_device rd;
-	static mt19937 gen(rd());
-	static poisson_distribution<int> pois (V_EXT);
-	
+void Neuron::updatePotential()
+{	
 	assert (index(clock_) < buffer_.size());
-	memb_pot_ = solveMembEquation() + buffer_[index(clock_)] + pois(gen)* J_AMP_EXCIT;
+	memb_pot_ = c1_ * memb_pot_ + i_ext_ * c2_ + buffer_[index(clock_)];
+	
+	if (receivesBGNoise_)
+	{
+		random_device rd;
+		mt19937 gen(rd());
+		poisson_distribution<int> pois (V_EXT * H);
+		
+		memb_pot_ += pois(gen)* J_AMP_EXCIT;
+	}
 }
 
 ///SPECIFIC BUFFER FUNCTIONS
@@ -145,16 +158,17 @@ bool Neuron::update(unsigned int steps)
 			nb_spikes_++;
 			spike = true;
 			t_spike_ = clock_;
+			spike_times_.push_back(clock_);
 		} 		
 		
 		///Checks if neuron is in a refractory state
-		if ((clock_ - t_spike_) < (REF_TIME / H))
+		if ( !spike_times_.empty() and (clock_ - t_spike_) < (REF_TIME / H))
 		{
 			setMembranePotential(RESET_POT);			
 		} 
 		else 
 		{
-			updatePot();
+			updatePotential();
 		}
 		
 		///Reset buffer value

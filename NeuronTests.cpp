@@ -13,6 +13,8 @@ using namespace std;
 	Neuron n(1);
 	double current (1.01);
 	
+	n.setCurrent(current);
+	
 	//200 updates
 	n.update(200);
 	
@@ -21,64 +23,81 @@ using namespace std;
 	{
 		cout << n.getPotentials()[i] << endl;
 	}
-}*/ 
-/*TEST (OneNeuronTest , MembranePotential)
+	
+	
+}
+*/
+
+TEST (OneNeuronTest , PositiveInput)
 {
-	Neuron n(1);
-	double current(1.0);
+	///Neuron of id = 1, excitatory type, receives no background noise, a external current is 1.01
+	Neuron n(1, true , false, 1.0);
 	
-	//One Update
-	//should expect exact calculated value 
-	n.update (1, current);
-	EXPECT_EQ(20.0 * (1.0 - exp(-0.1 / 20.0)) , n.getMembranePotential());
+	///Before any updates the potential must be equal to 0
+	EXPECT_EQ(0.0 , n.getMembranePotential());
 	
-	//Several updates
-	//should tend to 20 and should not spike
-	n.update(10000 , current);
-	EXPECT_NEAR(20.0, n.getMembranePotential() , 10e-3);
+	///One update
+	n.update (1);
+	
+	///Expect exact value
+	EXPECT_EQ(R*(1-exp(-H/TAU)), n.getMembranePotential());
+	
+	///Several updates
+	n.update(10000);
+	
+	///Potential should tend to 20 and neuron should not spike
+	EXPECT_NEAR(20, n.getMembranePotential() , 10e-3);
 	EXPECT_EQ(0 , n.getNbSpikes());
 	
 }
 
+TEST (OneNeuronTest , NegativeInput)
+{
+	///Neuron of id = 1, excitatory type, receives no background noise, a external current -1.0
+	Neuron n(1, true , false, -1.0);
+	
+	///After 21 updates (the first 20 are during refractory time when potential = 0)
+	n.update(1);
+	
+	///We should expect an exact negative value
+	EXPECT_EQ(-R*(1-exp(-H/TAU)), n.getMembranePotential());
+}
+
 TEST (OneNeuronTest , SpikeTimes)
 {
-	Neuron n(1);
-	double current(1.01);
+	///Neuron of id = 1, excitatoryx, doesnt receive background noise, and has external current = 1.01 mA
+	Neuron n (1 , true, false, 1.01); 
 	
-	//spike times with 1.01 as i_ext :
-	// at 92.4 ms, 186.8 ms, 281,2 ms and 375.6 ms
+	///We update the neuron enough times in order to make sure that we have 4 spikes
+	n.update(3757);
 	
-	//update the neuron 3757 times (steps) and check the spike times
-	n.update(3757 , current);
+	///We fetch the neuron's spike times vector
+	std::vector<double> spike_t = n.getSpikeTimesNeuron();
 	
-	std::vector<double> spike_t = n.getSpikeTimes();
-	
-	EXPECT_EQ(924 , spike_t[0]);
-	EXPECT_EQ(1848 , spike_t[1]);
-	EXPECT_EQ(2791 , spike_t[2]);
-	EXPECT_EQ(3734 , spike_t[3]);
+	///The normal values for the first four spikes are: 92.4 , 166.8 , 281.2 , 375.6
+	///Should expect spikes around the normal values 
+	cout << spike_t[0] <<" " <<spike_t[1]<<" "<<spike_t[2]<<" "<<spike_t[3]<< endl;
+	EXPECT_NEAR(924 , spike_t[0], 1);
+	EXPECT_NEAR(1868 , spike_t[1], 1);
+	EXPECT_NEAR(2812 , spike_t[2], 1);
+	EXPECT_NEAR(3756 , spike_t[3], 1);
 		
 }
 
-int main(int argc, char **argv)
-{
-	::testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
-}
-* */
-
 TEST ( NetworkTest , NumberofConnections )
 {
-	unsigned int nb_neurons (N_TOTAL);
-	Network* net = new Network(nb_neurons);
+	///Initiates network with N_TOTAL neurons
+	Network* net = new Network(N_TOTAL);
+	
+	///Variable to count the number of connections for one specific neuron
 	int nb_connections(0);
 	
+	///Creat and fetch the targets matrix from the network
 	net->makeTargets();
-	
 	vector<vector<unsigned int> > net_targets = net->getTargets();
 	
-	//Check combien des fois la neurone [0] se trouve dans le targets du network
-	for (size_t i(0) ; i < nb_neurons  ; i++)
+	///Check how many times the neuron 0 can be found in the entire targets_ matrix
+	for (size_t i(0) ; i < N_TOTAL ; i++)
 	{
 		assert (!net_targets[i].empty());
 		for (size_t j(0) ; j < net_targets[i].size() ; j++)
@@ -90,32 +109,29 @@ TEST ( NetworkTest , NumberofConnections )
 		}
 	}
 	
+	///We can expect an exact value of connections : C_TOTAL
 	EXPECT_EQ(nb_connections , C_TOTAL);
 }
 
-TEST( NetworkTest , NumberofSpikes)
+TEST(NeuronTest, DelayTest)
 {
-	unsigned int nb_neurons (N_TOTAL);
-	Network* net = new Network(nb_neurons);
-	int nb_spikes(0);
+	///Neuron of id = 1, excitatory, does not receive background noise, and has external current 0.0
+	Neuron n (1 , true, false, 0.0); 
 	
-	net->makeTargets();
-	net->update(1000);  //run for 100 ms
+	///We send a signal of size j_ to the neuron's buffer with D_STEPS of delay 
+	n.receive(D_STEPS, J_AMP_EXCIT);
 	
-	vector<unsigned int> spiking_indices = net->getIndices();
+	///Before any updates we expect the potential to be zero
+	EXPECT_EQ(0, n.getMembranePotential());
 	
-	//Check combien des fois la neurone [0] se trouve dans le targets du network
-	assert (!spiking_indices.empty());
-	for (size_t j(0) ; j < spiking_indices.size() ; j++)
-	{
-		if (spiking_indices[j] == 0) //looking for neuron 0 being mentioned in the targets vectors
-		{
-			nb_spikes++;
-		}
-	}
-		
-	//we expect around 4000 for 1 s. so for 100 ms we expcte around 4
-	EXPECT_NEAR (4000 , nb_spikes , 1);
+	///We update the neuron for D_STEPS so we expect the neuron has not received the signal yet
+	n.update (D_STEPS);
+	EXPECT_EQ(0, n.getMembranePotential());
+	
+	///After one update more the potential should be very near to the value transmitted
+	n.update(1);
+	EXPECT_EQ(J_AMP_EXCIT , n.getMembranePotential());
+
 }
 
 
@@ -124,3 +140,4 @@ int main(int argc, char **argv)
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }
+

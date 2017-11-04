@@ -22,23 +22,24 @@ Network::Network(int totalneurons)
 	///...with excitatory neurons
 	for (int i(0) ; i < (nb_neurons_ * 0.8) ; i++)
 	{
-		Neuron* n = new Neuron(i + 1 , "excitatory");
+		Neuron* n = new Neuron(1 , true);
 		addNeuron(n);
 		assert (i < N_EXCITATORY);
 	}
 	
-	///...and with inhibitory neurons
-	for (int i(0) ; i < (nb_neurons_ * 0.2) ; i++)
-	{
-		Neuron* n = new Neuron(i + 10000, "inhibitory");
-		addNeuron(n);
-		assert(i < N_INHIBITORY);
+	if (neurons_.size() < nb_neurons_)
+	{	
+		///...and with inhibitory neurons
+		for (int i(0) ; i < (nb_neurons_ * 0.2) ; i++)
+		{
+			Neuron* n = new Neuron(N_EXCITATORY , false);
+			addNeuron(n);
+			assert(i < N_INHIBITORY);
+		}
 	}
+		///Sets external current 
+		setExternalCurrent(0.0);
 	
-	///Sets external current 
-	setExternalCurrent(0.0);
-	
-	assert (neurons_.size() == N_TOTAL);
 }
 	
 ///Destructor
@@ -56,6 +57,11 @@ Network::~Network()
 vector<Neuron*> Network::getNeurons() const
 {
 	return neurons_;
+}
+
+vector<double> Network::getSpikeTimes() const
+{
+	return spike_times_;
 }
 
 vector<unsigned int> Network::getIndices() const
@@ -83,7 +89,15 @@ void Network::setExternalCurrent(double current)
 		n->setCurrent(current);
 	}
 }
-
+/*double Network::calcBackgroundNoise()
+{
+	random_device rd;
+	mt19937 gen(rd());
+	poisson_distribution<int> pois (V_EXT * H);
+	
+	return pois(gen) * J_AMP_EXCIT
+}
+*/
 void Network::makeTargets()
 {
 	cout << "Making targets ... " << endl;
@@ -152,6 +166,8 @@ void Network::update(unsigned int simulation_steps)
 	
 	while(steps_made < simulation_steps)
 	{
+		//cout << steps_made << endl;
+		
 		assert(!neurons_.empty());
 		
 		///We go through every neuron in the network at every step
@@ -159,7 +175,7 @@ void Network::update(unsigned int simulation_steps)
 		{	
 			assert(neurons_[i] != nullptr);
 		
-			spike = neurons_[i]->update(1); //current is normally 0 when we update network
+			spike = neurons_[i]->update(1); 
 			
 			///If neuron spikes ...
 			if (spike)

@@ -33,20 +33,23 @@ class Neuron
 		double j_;				//!< PSP Amplitude sent to post-synaptic neurons upon spiking
 		unsigned int clock_;	//!< Local clock (in steps)		
 		unsigned int t_spike_;	//!< Time at which neuron last spike (in steps)
-		std::string type_;      //!< String stating the type of neuron: excitatory or inhibitory
+		bool type_;     		//!< Boolean stating the type of neuron: if true it is excitatory. If false it is inhibitory
+		bool receivesBGNoise_;				//! Boolean stating whether or not a neuron receives backgroiund noise through randomly created spikes
 		std::vector<double> buffer_;		//!< Ring buffer which stores the incoming spikes at each step
 		std::vector<double> potentials_;	//!< Potentials saved at every time step
-
+		std::vector<double> spike_times_;	//!< Contains the spiking times of neuron (only used for testing)
+	
 	public:
 		
 		//! Constructor
 		/*! 
 		 * \brief Initiates a Neuron by setting initial parameters
 		 * \param id : Id of neuron in the network
-		 * \param typeneurone : string giving type of neurone
+		 * \param typeneurone : bool stating type of neuron. True if excitatory, False if inhibitory
+		 * \param bgnoise : true if the neuron receives background noise
 		 * \param current : Will intiates the external current given to the neuron
 		 */
-		Neuron(int id, std::string typeneurone = "excitatory", double current = 0.0); 	
+		Neuron(int id, bool typeneurone = true , bool bgnoise = true, double current = 0.0); 	
 		
 		//! Destructor
 		/*!
@@ -76,18 +79,19 @@ class Neuron
 		 */
 		int getNbSpikes() const;
 		
+		//! Getter of the vector of spike times
+		/*!
+		 * \return Returns the spike_times_ vector
+		 */
+		///Only used for testing
+		std::vector<double> getSpikeTimesNeuron() const;
+		
 		//! Getter of the neurons's buffer
 		/*!
 		 * \return Returns the buffer_ vector
 		 */
 		std::vector<double> getBuffer() const;
-		
-		//! Getter of the neuron type
-		/*!
-		 * \return Returns the string type_ ("excitatory" or "inhibitory")
-		 */
-		std::string getType() const;
-		
+				
 		//! Getter of the PSP Amplitude
 		/*!
 		 * \brief The value of the amplitude depends on the type of neuron
@@ -124,18 +128,22 @@ class Neuron
 		 */
 		void setMembranePotential(double);
 		
+		//! Setter of the receivesBGnoise variable
+		/*!
+		 * If the variable is set to true, the neuron receives background noise
+		 * \param noise : bool deciding whether a neuron receives background noise or not
+		 */
+		void setBackgroundNoise(bool noise);
 		
 //=====================SPECIFIC NEURON FUNCTIONS========================		
 		
-		
-		//! Solves membrane equation
+		//! Tells whether or not a neuron is excitatory
 		/*!
-		 * Uses the membrane equation, the incoming spikes kept in the 
-		 * buffer, and randomly generated spikes to calculate the
-		 * membrane potential
-		 * \return Returns the value of the membrane equation
+		 * If it returns true the neuron is excitatory. If it returns 
+		 * false, the neuron is inhibitory
+		 * \return Returns the value of the variable type_ 
 		 */
-		double solveMembEquation();
+		bool isExcitatory() const;
 		
 		//! Takes care of receiving spikes from pre-synaptic neurons
 		/*!
@@ -146,7 +154,11 @@ class Neuron
 		void receive(unsigned long time, double j_amp);
 		
 		//! Updates potential
-		void updatePot();
+		/*!
+		 * \brief Takes into account the membrane equation, the incoming
+		 * 	      buffer value, and randomly generated spikes
+		 */
+		void updatePotential();
 		
 		
 //====================SPECIFIC BUFFER FUNCTIONS=========================	

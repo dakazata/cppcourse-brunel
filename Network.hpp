@@ -53,6 +53,12 @@ class Network
 		 */	
 		std::vector<Neuron*> getNeurons() const;	
 		
+		//! Getter of spike_times_ vector
+		/*!
+		 * \return THe vector containing the spiking times
+		 */
+		 std::vector<double> getSpikeTimes() const;
+		 
 		//! Getter of neuron_idx_ vector
 		/*!
 		 * \return The vector containing the IDs of the neurons that have spiked 
@@ -85,9 +91,17 @@ class Network
 		
 		//! Sets the external current of the network
 		/*! 
-		 * \param external current to be passed on to neurons
+		 * \param double : external current to be passed on to neurons
 		 */
 		void setExternalCurrent(double current);
+		
+		
+		//! Calculates the background noise for each moleculews
+		/*! 
+		 * \return double : MUltiple of J_AMP_EXCIT	depending on numjber of spikes randomly created
+		 */
+		//double calcBackgroundNoise();
+		
 		
 		//! Writes onto external file
 		/*!
@@ -95,7 +109,7 @@ class Network
 		 * which is spiking. Data is used to plot graphs.
 		 */
 		void writeFile() const;
-
+		
 
 //==========================UPDATE FUNCTION=============================	
 

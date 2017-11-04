@@ -122,8 +122,8 @@ clean: CMakeFiles/neuron.dir/clean
 # Target rules for target CMakeFiles/neurontest.dir
 
 # All Build rule for target.
-CMakeFiles/neurontest.dir/all: gtest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/neurontest.dir/all: gtest/CMakeFiles/gtest.dir/all
+CMakeFiles/neurontest.dir/all: gtest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/depend
 	$(MAKE) -f CMakeFiles/neurontest.dir/build.make CMakeFiles/neurontest.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles  7 8 9
