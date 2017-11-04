@@ -9,8 +9,32 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
 add_executable (neuron Neuron.cpp main.cpp Network.cpp Simulation.cpp)
-add_executable (neurontest NeuronTests.cpp Neuron.cpp Network.hpp)
+add_executable (neurontest NeuronTests.cpp Neuron.cpp Network.cpp)
 
 target_link_libraries(neurontest gtest gtest_main)
 add_test(neurontest neurontest)
+
+
+###Doxygen Generation###
+
+#We first check if Doxygen is present
+find_package(Doxygen)
+if (DOXYGEN_FOUND)s
+	
+	#We then check if the Doxygen.in configuration file exists
+	IF(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
+	   message (FATAL_ERROR "Doxygen configuration file is neede to build the documentation :
+		    - ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in not found.
+		    - Generate one in the project folder with doxygen -g Doxyfile.in")
+	ENDIF(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
+
+	#We configure the doxyfile for make.
+	configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in
+	  ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
+	add_custom_target (doc ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
+	  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+	
+	ELSE(DOXYGEN_FOUND)
+	  message(FATAL_ERROR "Doxygen is neede to build the documentartion.")
+	ENDIF(DOXYGEN_FOUND)
 

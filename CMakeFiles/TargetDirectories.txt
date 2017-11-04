@@ -1,4 +1,5 @@
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neuron.dir
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/CMakeFiles/gtest.dir
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neurontest.dir
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/CMakeFiles/gtest_main.dir
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/neuron.dir
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/doc.dir
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/gtest/CMakeFiles/gtest.dir
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/neurontest.dir
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/gtest/CMakeFiles/gtest_main.dir

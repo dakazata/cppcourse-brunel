@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.2.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.2.3/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "Doxyfile.in"
   "gtest/CMakeLists.txt"
   "gtest/cmake/internal_utils.cmake"
   "/usr/local/share/cmake-3.2/Modules/CMakeCInformation.cmake"
@@ -26,6 +27,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.2/Modules/Compiler/GNU-C.cmake"
   "/usr/local/share/cmake-3.2/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.2/Modules/Compiler/GNU.cmake"
+  "/usr/local/share/cmake-3.2/Modules/FindDoxygen.cmake"
   "/usr/local/share/cmake-3.2/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake-3.2/Modules/FindPackageMessage.cmake"
   "/usr/local/share/cmake-3.2/Modules/FindPythonInterp.cmake"
@@ -45,6 +47,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "Doxyfile"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -52,6 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/neuron.dir/DependInfo.cmake"
+  "CMakeFiles/doc.dir/DependInfo.cmake"
   "CMakeFiles/neurontest.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
