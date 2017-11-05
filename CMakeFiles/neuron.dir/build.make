@@ -35,10 +35,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/localguest/Documents/ProgBA3/cppcourse-brunel
+CMAKE_SOURCE_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/localguest/Documents/ProgBA3/cppcourse-brunel
+CMAKE_BINARY_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
 
 # Include any dependencies generated for this target.
 include CMakeFiles/neuron.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/neuron.dir/flags.make
 
 CMakeFiles/neuron.dir/Neuron.cpp.o: CMakeFiles/neuron.dir/flags.make
 CMakeFiles/neuron.dir/Neuron.cpp.o: Neuron.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/Neuron.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Neuron.cpp.o -c /home/localguest/Documents/ProgBA3/cppcourse-brunel/Neuron.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Neuron.cpp.o -c /home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp
 
 CMakeFiles/neuron.dir/Neuron.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/Neuron.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/localguest/Documents/ProgBA3/cppcourse-brunel/Neuron.cpp > CMakeFiles/neuron.dir/Neuron.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp > CMakeFiles/neuron.dir/Neuron.cpp.i
 
 CMakeFiles/neuron.dir/Neuron.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/Neuron.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/localguest/Documents/ProgBA3/cppcourse-brunel/Neuron.cpp -o CMakeFiles/neuron.dir/Neuron.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp -o CMakeFiles/neuron.dir/Neuron.cpp.s
 
 CMakeFiles/neuron.dir/Neuron.cpp.o.requires:
 .PHONY : CMakeFiles/neuron.dir/Neuron.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/neuron.dir/Neuron.cpp.o.provides.build: CMakeFiles/neuron.dir/Neuron.
 
 CMakeFiles/neuron.dir/main.cpp.o: CMakeFiles/neuron.dir/flags.make
 CMakeFiles/neuron.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/main.cpp.o -c /home/localguest/Documents/ProgBA3/cppcourse-brunel/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/main.cpp.o -c /home/INTRANET/zarza/myfiles/cppcourse-brunel/main.cpp
 
 CMakeFiles/neuron.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/localguest/Documents/ProgBA3/cppcourse-brunel/main.cpp > CMakeFiles/neuron.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/zarza/myfiles/cppcourse-brunel/main.cpp > CMakeFiles/neuron.dir/main.cpp.i
 
 CMakeFiles/neuron.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/localguest/Documents/ProgBA3/cppcourse-brunel/main.cpp -o CMakeFiles/neuron.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/zarza/myfiles/cppcourse-brunel/main.cpp -o CMakeFiles/neuron.dir/main.cpp.s
 
 CMakeFiles/neuron.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/neuron.dir/main.cpp.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/neuron.dir/main.cpp.o.provides.build: CMakeFiles/neuron.dir/main.cpp.
 
 CMakeFiles/neuron.dir/Network.cpp.o: CMakeFiles/neuron.dir/flags.make
 CMakeFiles/neuron.dir/Network.cpp.o: Network.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/Network.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Network.cpp.o -c /home/localguest/Documents/ProgBA3/cppcourse-brunel/Network.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Network.cpp.o -c /home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp
 
 CMakeFiles/neuron.dir/Network.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/Network.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/localguest/Documents/ProgBA3/cppcourse-brunel/Network.cpp > CMakeFiles/neuron.dir/Network.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp > CMakeFiles/neuron.dir/Network.cpp.i
 
 CMakeFiles/neuron.dir/Network.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/Network.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/localguest/Documents/ProgBA3/cppcourse-brunel/Network.cpp -o CMakeFiles/neuron.dir/Network.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp -o CMakeFiles/neuron.dir/Network.cpp.s
 
 CMakeFiles/neuron.dir/Network.cpp.o.requires:
 .PHONY : CMakeFiles/neuron.dir/Network.cpp.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/neuron.dir/Network.cpp.o.provides.build: CMakeFiles/neuron.dir/Networ
 
 CMakeFiles/neuron.dir/Simulation.cpp.o: CMakeFiles/neuron.dir/flags.make
 CMakeFiles/neuron.dir/Simulation.cpp.o: Simulation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/Simulation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Simulation.cpp.o -c /home/localguest/Documents/ProgBA3/cppcourse-brunel/Simulation.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Simulation.cpp.o -c /home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.cpp
 
 CMakeFiles/neuron.dir/Simulation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/Simulation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/localguest/Documents/ProgBA3/cppcourse-brunel/Simulation.cpp > CMakeFiles/neuron.dir/Simulation.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.cpp > CMakeFiles/neuron.dir/Simulation.cpp.i
 
 CMakeFiles/neuron.dir/Simulation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/Simulation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/localguest/Documents/ProgBA3/cppcourse-brunel/Simulation.cpp -o CMakeFiles/neuron.dir/Simulation.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.cpp -o CMakeFiles/neuron.dir/Simulation.cpp.s
 
 CMakeFiles/neuron.dir/Simulation.cpp.o.requires:
 .PHONY : CMakeFiles/neuron.dir/Simulation.cpp.o.requires
@@ -175,6 +175,6 @@ CMakeFiles/neuron.dir/clean:
 .PHONY : CMakeFiles/neuron.dir/clean
 
 CMakeFiles/neuron.dir/depend:
-	cd /home/localguest/Documents/ProgBA3/cppcourse-brunel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/neuron.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/INTRANET/zarza/myfiles/cppcourse-brunel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neuron.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/neuron.dir/depend
 

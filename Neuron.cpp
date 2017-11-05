@@ -13,7 +13,7 @@ Neuron::Neuron(int id, bool typeneurone, bool bgnoise , double current)
 	memb_pot_(0.0),
 	i_ext_(current),
 	clock_(0),
-	t_spike_(0),   ///Starts at 20 so that neuron does not go straight into refractory state
+	t_spike_(0),  
 	type_ (typeneurone),
 	receivesBGNoise_(bgnoise),
 	buffer_(), 
@@ -112,22 +112,31 @@ bool Neuron::isExcitatory() const
 void Neuron::receive(unsigned long time , double j_amp)
 {	
 	const auto t_out = time % (D_STEPS + 1);
+	
 	assert(t_out < buffer_.size());
+	
 	buffer_[t_out] += j_amp;
+}
+
+int Neuron::poisson() const
+{
+	static random_device rd;
+	static mt19937 gen(rd());
+	static poisson_distribution<int> pois (NU_EXT * H); 
+	
+	int value(pois(gen));
+	return value;
 }
 
 void Neuron::updatePotential()
 {	
 	assert (index(clock_) < buffer_.size());
+	
 	memb_pot_ = c1_ * memb_pot_ + i_ext_ * c2_ + buffer_[index(clock_)];
 	
 	if (receivesBGNoise_)
 	{
-		random_device rd;
-		mt19937 gen(rd());
-		poisson_distribution<int> pois (V_EXT * H);
-		
-		memb_pot_ += pois(gen)* J_AMP_EXCIT;
+		memb_pot_ += poisson() * J_AMP_EXCIT;
 	}
 }
 

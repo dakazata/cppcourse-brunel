@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/localguest/Documents/ProgBA3/cppcourse-brunel/Network.cpp" "/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/neuron.dir/Network.cpp.o"
-  "/home/localguest/Documents/ProgBA3/cppcourse-brunel/Neuron.cpp" "/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/neuron.dir/Neuron.cpp.o"
-  "/home/localguest/Documents/ProgBA3/cppcourse-brunel/Simulation.cpp" "/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/neuron.dir/Simulation.cpp.o"
-  "/home/localguest/Documents/ProgBA3/cppcourse-brunel/main.cpp" "/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/neuron.dir/main.cpp.o"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp" "/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neuron.dir/Network.cpp.o"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp" "/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neuron.dir/Neuron.cpp.o"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.cpp" "/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neuron.dir/Simulation.cpp.o"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/main.cpp" "/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/neuron.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

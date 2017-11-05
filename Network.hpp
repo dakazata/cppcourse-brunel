@@ -23,12 +23,12 @@
 class Network
 {
 	private:
+	
 		unsigned int nb_neurons_;						//!< Total number of neurons in
 		std::vector<Neuron*> neurons_; 					//!< Points to each neuron in the network
 		std::vector<double> spike_times_;				//!< Keeps all the spikes over the simulation time
 		std::vector<unsigned int> neuron_idx_;			//!< Keeps the indices of the spiking neuron
 		std::vector<std::vector<unsigned int>> targets_;//!< Associates each neuron with its post-synaptic neurons
-		
 		
 	public:
 		//! Constructor
@@ -74,13 +74,7 @@ class Network
 		
 //=====================SPECIFIC NETWORK FUNCTIONS========================
 		
-		
-		//! Add a neuron to the vector neurons_
-		/*! 
-		 * \param neuron points toeward the neuron being added
-		 */
-		void addNeuron(Neuron* neuron);
-		
+	
 		//! Creates targets for all neurons in the network
 		/*!
 		 * Randomly created indices which correspond to the neurons a 
@@ -94,15 +88,7 @@ class Network
 		 * \param double : external current to be passed on to neurons
 		 */
 		void setExternalCurrent(double current);
-		
-		
-		//! Calculates the background noise for each moleculews
-		/*! 
-		 * \return double : MUltiple of J_AMP_EXCIT	depending on numjber of spikes randomly created
-		 */
-		//double calcBackgroundNoise();
-		
-		
+			
 		//! Writes onto external file
 		/*!
 		 * Writes the spike times and the associated index of neuron

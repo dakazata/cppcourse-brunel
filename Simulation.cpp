@@ -15,8 +15,6 @@ void Simulation::run()
 	///Creation of targets in the network
 	net->makeTargets();
 	
-	//cout << "Running simulation ... " << endl;
-	
 	///Launches the network updates
 	net->update(SIM_END_TIME / H);
 	

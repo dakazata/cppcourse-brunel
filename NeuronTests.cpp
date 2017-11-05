@@ -8,26 +8,6 @@
 using namespace std;
 
 
-/*TEST(OneNeuronTest , RefractoryPeriod)
-{
-	Neuron n(1);
-	double current (1.01);
-	
-	n.setCurrent(current);
-	
-	//200 updates
-	n.update(200);
-	
-	
-	for (size_t i(0) ; i < n.getPotentials().size() ; i++)
-	{
-		cout << n.getPotentials()[i] << endl;
-	}
-	
-	
-}
-*/
-
 TEST (OneNeuronTest , PositiveInput)
 {
 	///Neuron of id = 1, excitatory type, receives no background noise, a external current is 1.01
@@ -65,7 +45,7 @@ TEST (OneNeuronTest , NegativeInput)
 
 TEST (OneNeuronTest , SpikeTimes)
 {
-	///Neuron of id = 1, excitatoryx, doesnt receive background noise, and has external current = 1.01 mA
+	///Neuron of id = 1, excitatory, does not receive background noise, and has external current = 1.01 mA
 	Neuron n (1 , true, false, 1.01); 
 	
 	///We update the neuron enough times in order to make sure that we have 4 spikes
@@ -76,13 +56,32 @@ TEST (OneNeuronTest , SpikeTimes)
 	
 	///The normal values for the first four spikes are: 92.4 , 166.8 , 281.2 , 375.6
 	///Should expect spikes around the normal values 
-	cout << spike_t[0] <<" " <<spike_t[1]<<" "<<spike_t[2]<<" "<<spike_t[3]<< endl;
 	EXPECT_NEAR(924 , spike_t[0], 1);
 	EXPECT_NEAR(1868 , spike_t[1], 1);
 	EXPECT_NEAR(2812 , spike_t[2], 1);
 	EXPECT_NEAR(3756 , spike_t[3], 1);
 		
 }
+
+TEST(OneNeuronTest , RefractoryPeriod)
+{
+	///Neuron of id = 1, excitatory, does not receive background noise, and has external current = 1.01 mA
+	Neuron n(1, true,false, 1.01 );
+	
+	///Update until the firs spike
+	n.update(924);
+	EXPECT_GT(n.getMembranePotential() , 20.0 );
+	
+	///Next update it should go back to zero
+	n.update(1);	
+	EXPECT_EQ(0.0, n.getMembranePotential());
+
+	///20 updates later (refractory perio) it should still be zero
+	n.update(19) ;  
+	EXPECT_EQ(0.0, n.getMembranePotential());
+
+}
+
 
 TEST ( NetworkTest , NumberofConnections )
 {

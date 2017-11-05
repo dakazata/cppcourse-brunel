@@ -681,3 +681,18 @@ Linking C executable cmTryCompileExec760881348
 make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp'
 
 
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1066738106/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1066738106.dir/build.make CMakeFiles/cmTryCompileExec1066738106.dir/build
+make[1]: Entering directory `/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1066738106.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1066738106.dir/CheckIncludeFiles.c.o   -c /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec1066738106
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1066738106.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1066738106.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec1066738106 -rdynamic 
+make[1]: Leaving directory `/home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/CMakeTmp'
+
+

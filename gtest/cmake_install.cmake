@@ -1,4 +1,4 @@
-# Install script for directory: /home/localguest/Documents/ProgBA3/cppcourse-brunel/gtest
+# Install script for directory: /home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

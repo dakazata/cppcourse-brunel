@@ -23,7 +23,8 @@ Network::Network(int totalneurons)
 	for (int i(0) ; i < (nb_neurons_ * 0.8) ; i++)
 	{
 		Neuron* n = new Neuron(1 , true);
-		addNeuron(n);
+		assert(n != nullptr);
+		neurons_.push_back(n);	
 		assert (i < N_EXCITATORY);
 	}
 	
@@ -33,7 +34,8 @@ Network::Network(int totalneurons)
 		for (int i(0) ; i < (nb_neurons_ * 0.2) ; i++)
 		{
 			Neuron* n = new Neuron(N_EXCITATORY , false);
-			addNeuron(n);
+			assert(n != nullptr);
+			neurons_.push_back(n);
 			assert(i < N_INHIBITORY);
 		}
 	}
@@ -76,12 +78,6 @@ vector<vector<unsigned int>> Network::getTargets() const
 
 ///SPECIFIC NETWORK FUNCTIONS
 
-void Network::addNeuron(Neuron* neuron)
-{
-	assert(neuron != nullptr);
-	neurons_.push_back(neuron);
-}
-
 void Network::setExternalCurrent(double current)
 {
 	for (auto& n: neurons_)
@@ -89,24 +85,16 @@ void Network::setExternalCurrent(double current)
 		n->setCurrent(current);
 	}
 }
-/*double Network::calcBackgroundNoise()
-{
-	random_device rd;
-	mt19937 gen(rd());
-	poisson_distribution<int> pois (V_EXT * H);
-	
-	return pois(gen) * J_AMP_EXCIT
-}
-*/
+
 void Network::makeTargets()
 {
 	cout << "Making targets ... " << endl;
 	
 	///Random generator 
-	random_device rd;
-	mt19937 gen(rd());
-	uniform_int_distribution<> disE(0 , N_EXCITATORY -1);
-	uniform_int_distribution<> disI(N_EXCITATORY,N_TOTAL -1);
+	static random_device rd;
+	static mt19937 gen(rd());
+	static uniform_int_distribution<> disE(0 , N_EXCITATORY -1);
+	static uniform_int_distribution<> disI(N_EXCITATORY,N_TOTAL -1);
 	
 	///Generate C_TOTAL connections for each neuron in the network
 	for (size_t source(0); source < nb_neurons_ ; source++)
@@ -135,7 +123,7 @@ void Network::writeFile() const
 	
 	///Creation and opening of external file
 	ofstream textfile;
-	textfile.open("Spike_Times.txt");	
+	textfile.open("Spike_Times_D.txt");	
 	
 	assert(spike_times_.size() == neuron_idx_.size());
 	
@@ -164,11 +152,11 @@ void Network::update(unsigned int simulation_steps)
 	unsigned int steps_made(0);
 	bool spike(false);
 	
+	assert(!neurons_.empty());
+	
 	while(steps_made < simulation_steps)
 	{
 		//cout << steps_made << endl;
-		
-		assert(!neurons_.empty());
 		
 		///We go through every neuron in the network at every step
 		for (size_t i (0); i < neurons_.size(); i++)

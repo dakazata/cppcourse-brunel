@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/localguest/Documents/ProgBA3/cppcourse-brunel/gtest/src/gtest_main.cc" "/home/localguest/Documents/ProgBA3/cppcourse-brunel/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/src/gtest_main.cc" "/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/localguest/Documents/ProgBA3/cppcourse-brunel/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/INTRANET/zarza/myfiles/cppcourse-brunel/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

@@ -153,6 +153,13 @@ class Neuron
 		 */
 		void receive(unsigned long time, double j_amp);
 		
+		//! Creates random int 
+		/*!
+		 * \brief Uses a randmo generato o create an int which represents
+		 * 		  the number of external spikes
+		 */ 
+		int poisson() const;
+		
 		//! Updates potential
 		/*!
 		 * \brief Takes into account the membrane equation, the incoming
@@ -188,7 +195,8 @@ class Neuron
 		 * \param time : corresponding step in time
 		 * \param type : type of neuron sending the incoming spike
 		 */
-		void addJ(unsigned long time, std::string type);
+		
+		//void addJ(unsigned long time, std::string& type);
 				
 		
 //==========================UPDATE FUNCTION=============================		
