@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Constants.hpp
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.cpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Network.cpp
 Network.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Network.hpp
 iostream
 -
 fstream
@@ -22,21 +22,21 @@ cassert
 random
 -
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Network.hpp
 vector
 -
 array
 -
 Neuron.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Neuron.hpp
 Constants.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Constants.hpp
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.cpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Neuron.cpp
 iostream
 -
 Neuron.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Neuron.hpp
 cmath
 -
 cassert
@@ -44,29 +44,29 @@ cassert
 random
 -
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Neuron.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Neuron.hpp
 vector
 -
 string
 -
 Constants.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Constants.hpp
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.cpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Simulation.cpp
 Simulation.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Simulation.hpp
 fstream
 -
 iostream
 -
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Simulation.hpp
 Constants.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Constants.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Constants.hpp
 Network.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Network.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Network.hpp
 
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/main.cpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/main.cpp
 iostream
 -
 fstream
@@ -74,5 +74,5 @@ fstream
 cassert
 -
 Simulation.hpp
-/home/INTRANET/zarza/myfiles/cppcourse-brunel/Simulation.hpp
+/home/localguest/Documents/ProgBA3/cppcourse-brunel/src/Simulation.hpp
 

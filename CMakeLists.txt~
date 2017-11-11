@@ -8,8 +8,8 @@ add_subdirectory(gtest)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
-add_executable (neuron Neuron.cpp main.cpp Network.cpp Simulation.cpp)
-add_executable (neurontest NeuronTests.cpp Neuron.cpp Network.cpp)
+add_executable (neuron src/Neuron.cpp src/main.cpp src/Network.cpp src/Simulation.cpp)
+add_executable (neurontest test/NeuronTests.cpp src/Neuron.cpp src/Network.cpp)
 
 target_link_libraries(neurontest gtest gtest_main)
 add_test(neurontest neurontest)
@@ -19,7 +19,7 @@ add_test(neurontest neurontest)
 
 #We first check if Doxygen is present
 find_package(Doxygen)
-if (DOXYGEN_FOUND)s
+if (DOXYGEN_FOUND)
 	
 	#We then check if the Doxygen.in configuration file exists
 	IF(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)

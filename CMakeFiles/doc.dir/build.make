@@ -35,10 +35,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
+CMAKE_SOURCE_DIR = /home/localguest/Documents/ProgBA3/cppcourse-brunel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
+CMAKE_BINARY_DIR = /home/localguest/Documents/ProgBA3/cppcourse-brunel
 
 # Utility rule file for doc.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/INTRANET/zarza/myfiles/cppcourse-brunel
 include CMakeFiles/doc.dir/progress.make
 
 CMakeFiles/doc:
-	/usr/bin/doxygen /home/INTRANET/zarza/myfiles/cppcourse-brunel/Doxyfile
+	/usr/bin/doxygen /home/localguest/Documents/ProgBA3/cppcourse-brunel/Doxyfile
 
 doc: CMakeFiles/doc
 doc: CMakeFiles/doc.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/doc.dir/clean:
 .PHONY : CMakeFiles/doc.dir/clean
 
 CMakeFiles/doc.dir/depend:
-	cd /home/INTRANET/zarza/myfiles/cppcourse-brunel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel /home/INTRANET/zarza/myfiles/cppcourse-brunel/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/localguest/Documents/ProgBA3/cppcourse-brunel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doc.dir/depend
 

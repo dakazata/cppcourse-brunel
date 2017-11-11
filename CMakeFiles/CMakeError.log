@@ -338,3 +338,71 @@ int main(int argc, char** argv)
 #endif
 }
 
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3959364029/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3959364029.dir/build.make CMakeFiles/cmTryCompileExec3959364029.dir/build
+make[1]: Entering directory `/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3959364029.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3959364029.dir/CheckSymbolExists.c.o   -c /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3959364029
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3959364029.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3959364029.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3959364029 -rdynamic 
+CMakeFiles/cmTryCompileExec3959364029.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3959364029] Error 1
+make: *** [cmTryCompileExec3959364029/fast] Error 2
+
+File /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec293853741/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec293853741.dir/build.make CMakeFiles/cmTryCompileExec293853741.dir/build
+make[1]: Entering directory `/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec293853741.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec293853741.dir/CheckSymbolExists.c.o   -c /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec293853741
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec293853741.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec293853741.dir/CheckSymbolExists.c.o  -o cmTryCompileExec293853741 -rdynamic 
+CMakeFiles/cmTryCompileExec293853741.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec293853741] Error 1
+make[1]: Leaving directory `/home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec293853741/fast] Error 2
+
+File /home/localguest/Documents/ProgBA3/cppcourse-brunel/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
